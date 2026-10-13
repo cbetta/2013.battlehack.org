@@ -4,7 +4,7 @@ name: Publish to jiji
 # ghcr.io/cbetta/2013.battlehack.org -> pin that image in cbetta/jiji's
 # docker-compose.yml, which triggers jiji's own deploy. jiji holds no copy of
 # the site, only which image it runs, so master here is always what
-# 2013.battlehack.betta.io serves.
+# battlehack2013.betta.io serves.
 #
 # Three jobs, so the jiji deploy key (a push to jiji deploys to the home
 # server) never shares a machine with anything else: the build runs inside

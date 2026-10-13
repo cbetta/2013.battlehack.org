@@ -41,7 +41,7 @@ done
 # The status line nginx answers with, asked from inside the container (it has
 # no network). busybox wget follows redirects, so this uses nc.
 status() {
-  docker exec "$name" sh -c "printf 'GET $1 HTTP/1.0\r\nHost: 2013.battlehack.betta.io\r\n\r\n' | nc 127.0.0.1 8080 | head -1 | tr -d '\r'"
+  docker exec "$name" sh -c "printf 'GET $1 HTTP/1.0\r\nHost: battlehack2013.betta.io\r\n\r\n' | nc 127.0.0.1 8080 | head -1 | tr -d '\r'"
 }
 expect() {
   local got
