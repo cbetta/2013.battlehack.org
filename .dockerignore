@@ -1,0 +1,11 @@
+# Everything at the root is the site, except the repo's own tooling and the
+# 2013 Capistrano config, which was never part of it.
+.git
+.github
+scripts
+config
+Dockerfile
+netlify.toml
+.dockerignore
+*.md
+CNAME
