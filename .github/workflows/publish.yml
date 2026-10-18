@@ -21,7 +21,6 @@ on:
       - "!scripts/**"
       - "!.github/**"
       - "!**.md"
-      - "!netlify.toml"
       - ".github/workflows/publish.yml"
   workflow_dispatch:
 
@@ -71,7 +70,7 @@ jobs:
         id: meta
         run: |
           echo "tag=sha-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
-          epoch="$(git log -1 --format=%ct -- . ':!scripts' ':!.github' ':!*.md' ':!netlify.toml')"
+          epoch="$(git log -1 --format=%ct -- . ':!scripts' ':!.github' ':!*.md')"
           [[ "$epoch" =~ ^[0-9]+$ ]] || { echo "::error::no commit has changed the site"; exit 1; }
           echo "epoch=$epoch" >> "$GITHUB_OUTPUT"
 
