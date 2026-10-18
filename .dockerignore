@@ -5,7 +5,6 @@
 scripts
 config
 Dockerfile
-netlify.toml
 .dockerignore
 *.md
 CNAME
